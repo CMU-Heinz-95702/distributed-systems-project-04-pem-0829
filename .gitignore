@@ -1,0 +1,4 @@
+
+# large local tools
+mongosh-*/
+*.tgz
