@@ -1,10 +1,19 @@
 {
   "name": "P4 Tomcat Codespace",
   "build": { "dockerfile": "Dockerfile" },
+
+  "postStartCommand": "/usr/local/tomcat/bin/catalina.sh start",
+
   "forwardPorts": [8080],
   "portsAttributes": {
-    "8080": { "label": "Tomcat", "onAutoForward": "openBrowser", "protocol": "http" }
+    "8080": {
+      "label": "Tomcat",
+      "onAutoForward": "openBrowser",
+      "protocol": "http",
+      "visibility": "public"
+    }
   },
+
   "containerEnv": {
     "MONGO_URI": "mongodb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.6yieb2k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     "MONGO_DB": "cmu95702",
