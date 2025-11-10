@@ -11,7 +11,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
 # Mongo env (fill password)
-ENV MONGO_URI="mongodb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.6yieb2k.mongodb.net/?appName=Cluster0" \
+ENV MONGO_URI="mongodprintenv | grep MONGO_URIb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.6yieb2k.mongodb.net/?appName=Cluster0" \
     MONGO_DB="cmu95702" \
     MONGO_COLL="logs"
 
