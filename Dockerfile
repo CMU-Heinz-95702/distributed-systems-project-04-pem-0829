@@ -2,7 +2,7 @@ FROM tomcat:10.1-jdk17-temurin
 
 # TLS roots for Atlas
 RUN apt-get update \
- && apt-get install -y ca-certificates \
+ && apt-get install -y git ca-certificates \
  && update-ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
