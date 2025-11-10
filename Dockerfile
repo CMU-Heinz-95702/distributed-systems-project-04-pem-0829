@@ -10,10 +10,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
 # Explicit, sane Atlas params
-ENV MONGO_URI="mongodb://pmuller_db_user:uUJc84gJWAmxfs2g@\
-ac-lalwbg5-shard-00-00.trig0cp.mongodb.net:27017,\
-ac-lalwbg5-shard-00-01.trig0cp.mongodb.net:27017,\
-ac-lalwbg5-shard-00-02.trig0cp.mongodb.net:27017/?retryWrites=true&w=majority&tls=true&authMechanism=SCRAM-SHA-1" \
+ENV MONGO_URI="mongodb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.6yieb2k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" \
     MONGO_DB="cmu95702" \
     MONGO_COLL="logs"
 
