@@ -6,7 +6,7 @@
     "8080": { "label": "Tomcat", "onAutoForward": "openBrowser", "protocol": "http" }
   },
   "containerEnv": {
-    "MONGO_URI": "mongodb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.trig0cp.mongodb.net/?appName=Cluster0",
+    "MONGO_URI": "mongodb+srv://pmuller_db_user:uUJc84gJWAmxfs2g@cluster0.6yieb2k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     "MONGO_DB": "cmu95702",
     "MONGO_COLL": "logs"
   }
