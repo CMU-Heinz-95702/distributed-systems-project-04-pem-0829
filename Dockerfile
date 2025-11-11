@@ -30,7 +30,6 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=5 \
   CMD curl -fsS http://localhost:8080/ || exit 1
 
 EXPOSE 8080
-CMD ["catalina.sh","run"]
-
+CMD ["/bin/bash","-lc","/usr/local/tomcat/bin/catalina.sh start && sleep 1 && tail -F /usr/local/tomcat/logs/catalina.out"]
 
 # /usr/local/tomcat/bin/catalina.sh start
