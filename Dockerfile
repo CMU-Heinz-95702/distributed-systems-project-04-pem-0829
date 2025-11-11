@@ -12,7 +12,7 @@ RUN set -eux; \
     | tar -xz -C /opt && \
   ln -s /opt/mongosh-${MONGOSH_VER}-linux-x64/bin/mongosh /usr/local/bin/mongosh && \
   rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update && apt-get install -y --no-install-recommends maven
 # Enforce TLS 1.2 for MongoDB drivers
 ENV JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.2 -Dhttps.protocols=TLSv1.2"
 
@@ -31,3 +31,6 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=5 \
 
 EXPOSE 8080
 CMD ["catalina.sh","run"]
+
+
+# /usr/local/tomcat/bin/catalina.sh start
