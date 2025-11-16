@@ -1,3 +1,5 @@
+// //Peter Muller/pmuller
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
